@@ -14,6 +14,12 @@ pipeline {
         echo 'agent successfull installation'
       }
     }
+    stage('based on previous') {
+      when {
+        expression {
+        currentBuild.getPreviousBuild().result==='SUCCESS'
+        }
+      }
     
     stage ('filesysytem') {
       steps {
