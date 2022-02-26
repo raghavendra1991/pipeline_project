@@ -8,28 +8,34 @@ pipeline {
   }
   stages {
         
-    stage ('Build') {
+    stage ('job1') {
       agent { label 'slave'}
       steps {
         echo 'agent successfull installation'
       }
     }
     
-    stage ('Test') {
+    stage ('job2') {
       steps {
         echo "My name is $Name"
       }
     }
+    stage ("triggerjob") {
+      steps {
+         build ('job1')
+         build('job2')
+      }
+    }
     stage ("build") {
       parallel{
-        stage('job1'){
+        stage('job3'){
            steps{
-           echo "job1"
+           echo "job3"
            }
         }
-        stage('job2'){
+        stage('job4'){
            steps{
-           echo "job2"
+           echo "job4"
            }
         }             
      }
