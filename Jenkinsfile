@@ -4,7 +4,7 @@ pipeline {
           Name="duvva_raghavendra"
   }
   triggers {
-      upstream threshold: 'FAILURE', upstreamProjects: 'pipeline-project'
+      cron '2 * * * *'
   }
   stages {
         
@@ -18,6 +18,13 @@ pipeline {
     stage ('job2') {
       steps {
         echo "My name is $Name"
+      }
+    }
+    
+    stage ('triggerjob') {
+      steps {
+        build('job1')
+        build('job2')
       }
     }
     stage ("build") {
