@@ -23,7 +23,7 @@ pipeline {
     
     stage ('triggerjob') {
       steps {
-        build('job1')
+        build(job:'job1',propagate:false)
         build('job2')
       }
     }
