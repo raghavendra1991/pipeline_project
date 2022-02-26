@@ -20,5 +20,17 @@ pipeline {
         echo "My name is $Name"
       }
     }
+    stage ("build") {
+      parallel{
+        stage('job1'){
+           steps{
+           echo "job1"
+     }
+   }
+        stage('job2'){
+           steps{
+           echo "job2"
+     }
+   }             
   }
 }
