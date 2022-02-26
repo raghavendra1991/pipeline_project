@@ -1,0 +1,5 @@
+Pipeline {
+   agent {
+    label 'slave'
+    }
+}    
