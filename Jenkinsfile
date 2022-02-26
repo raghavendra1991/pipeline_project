@@ -37,7 +37,7 @@ pipeline {
   } 	
   post {
       always {
-        // Always run, regardless of build status
+         echo  "Always run, regardless of build status"
       }
   }
 }
