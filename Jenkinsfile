@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-          Name="duvva raghavendra"
+          Name="duvva_raghavendra"
   }
   stages {
     stage ('Build') {
@@ -12,7 +12,7 @@ pipeline {
     }
     stage ('Test') {
       steps {
-        echo ' My name is $Name'
+        echo "My name is $Name"
       }
     }
   }
