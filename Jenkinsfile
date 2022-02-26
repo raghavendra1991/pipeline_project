@@ -4,7 +4,7 @@ pipeline {
           Name="duvva_raghavendra"
   }
   triggers {
-       cron '1 * * * *'
+      upstream threshold: 'FAILURE', upstreamProjects: 'pipeline-project'
   }
   stages {
         
