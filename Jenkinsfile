@@ -25,12 +25,13 @@ pipeline {
         stage('job1'){
            steps{
            echo "job1"
-     }
-   }
+           }
+        }
         stage('job2'){
            steps{
            echo "job2"
+           }
+        }             
      }
-   }             
-  }
+    }
 }
