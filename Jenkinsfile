@@ -17,8 +17,8 @@ pipeline {
     }
     stage ('triggerjob') {
       steps {
-          build('Build')
-          build('Test')
+          build('job1')
+          build('job2')
       }
     }
   }
