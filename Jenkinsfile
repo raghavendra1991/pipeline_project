@@ -15,5 +15,11 @@ pipeline {
         echo "My name is $Name"
       }
     }
+    stage ('triggerjob') {
+      steps {
+          build('Build')
+          build('Test')
+      }
+    }
   }
 }
