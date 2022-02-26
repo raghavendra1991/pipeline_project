@@ -1,5 +1,5 @@
 Pipeline {
-   agent {
-    label 'slave'
-    }
+  agent {
+  label 'slave'
+  }
 }    
