@@ -36,8 +36,8 @@ pipeline {
     }
   } 	
   post {
-    always {
-      // Always run, regardless of build status
-    }
+      always {
+        // Always run, regardless of build status
+      }
   }
 }
