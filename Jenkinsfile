@@ -32,7 +32,7 @@ pipeline {
            echo "job4"
            }
         }             
-     }
+      }
     }
   } 	
   post {
