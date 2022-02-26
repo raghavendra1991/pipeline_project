@@ -7,13 +7,6 @@ pipeline {
        cron '1 * * * *'
   }
   stages {
-    
-    stage ('trigger') {
-      steps {
-        build('Build')
-        build('Test')
-      }
-    }
         
     stage ('Build') {
       agent { label 'slave'}
