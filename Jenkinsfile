@@ -15,9 +15,9 @@ pipeline {
       }
     }
     
-    stage ('job2') {
+    stage ('filesysytem') {
       steps {
-        echo "My name is $Name"
+        sh "ls -l"
       }
     }
    
