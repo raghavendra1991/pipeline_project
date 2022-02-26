@@ -20,13 +20,7 @@ pipeline {
         echo "My name is $Name"
       }
     }
-    
-    stage ('triggerjob') {
-      steps {
-        build(job:'job1',propagate:false)
-        build('job2')
-      }
-    }
+   
     stage ("build") {
       parallel{
         stage('job3'){
