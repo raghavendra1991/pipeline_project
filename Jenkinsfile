@@ -46,5 +46,6 @@ pipeline {
       always {
          echo  "Always run, regardless of build status"
       }
+    }
   }
 }
