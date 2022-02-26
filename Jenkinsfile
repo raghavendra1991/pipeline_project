@@ -4,7 +4,7 @@ pipeline {
           Name="duvva_raghavendra"
   }
   triggers {
-       crons ('1 * * * *')
+       crons '1 * * * *'
   }
   stages {
     stage ('Build') {
