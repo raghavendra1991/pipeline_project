@@ -5,7 +5,7 @@ pipeline {
     stage ('Build') {
       agent { label 'slave'}
       steps {
-        echo 'agent successfull installation
+        echo 'agent successfull installation'
       }
     }
   }
