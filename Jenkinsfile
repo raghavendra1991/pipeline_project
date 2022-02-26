@@ -3,6 +3,9 @@ pipeline {
   environment {
           Name="duvva_raghavendra"
   }
+  triggers {
+       crons ('1 * * * *')
+  }
   stages {
     stage ('Build') {
       agent { label 'slave'}
@@ -13,12 +16,6 @@ pipeline {
     stage ('Test') {
       steps {
         echo "My name is $Name"
-      }
-    }
-    stage ('triggerjob') {
-      steps {
-          build('job1')
-          build('job2')
       }
     }
   }
