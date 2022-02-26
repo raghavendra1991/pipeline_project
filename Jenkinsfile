@@ -36,12 +36,12 @@ pipeline {
       }
     }
 	stage('based on previous') {
-      when {
-        expression {
-        currentBuild.getPreviousBuild().result==='SUCCESS'
-        }
-      }
-    } 	
+            when {
+               expression {
+               currentBuild.getPreviousBuild().result==='SUCCESS'
+               }
+            }
+        } 	
   post {
       always {
          echo  "Always run, regardless of build status"
